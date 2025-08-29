@@ -17,3 +17,11 @@ def buscar_dados(url):
     resposta = requests.get(url, timeout=30)
     resposta.raise_for_status()
     return resposta.json()
+
+
+# Função que Busca o Id da UF informada no parametro
+def obter_estado_id_por_uf(uf):
+    IBGE_ESTADO_URL =  f"https://servicodados.ibge.gov.br/api/v1/localidades/estados/{uf}/"
+    dados = buscar_dados(IBGE_ESTADO_URL)
+    estado_id = dados['id']
+    return estado_id
