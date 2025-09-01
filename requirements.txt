@@ -1,0 +1,4 @@
+databricks_connect==16.4.2
+pyspark==3.5.2+databricks.connect.16.4.2
+Requests==2.32.5
+tenacity==8.2.2
