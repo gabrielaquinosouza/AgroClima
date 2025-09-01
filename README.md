@@ -3,7 +3,7 @@ Projeto desenvolvido através da Trilha de Engenharia de Dados da POD Tiller
 
  **Descrição:** Este projeto foi desenvolvido como parte da  trilha UPSKILL TILLER | de Engenharia de Dados e tem como objetivo principal analisar a relação entre a produção de milho e dados históricos de temperatura. A proposta envolve a coleta, o tratamento e o cruzamento de dados agrícolas e meteorológicos, buscando identificar padrões que possam impactar o rendimento das safras. 
 
-**Configurações** Todos os notebook de extração de dados foram parametrizados para flexibilizar  a extração dos dados. Todas as API's são publicas e não nescessita de token ou APY key.
+**Configurações** Todos os notebook de extração de dados foram parametrizados para flexibilizar  a extração dos dados. Todas as API's são publicas e não nescessita de token ou API key.
 
 #### API's Utilizadas
 
@@ -45,6 +45,8 @@ Endpoints utilizados: https://servicodados.ibge.gov.br/api/v1/localidades/estado
 
 **4 -  Outras Fontes**
 - https://raw.githubusercontent.com/kelvins/municipios-brasileiros/main/json/municipios.json
+
+
 
 
 
