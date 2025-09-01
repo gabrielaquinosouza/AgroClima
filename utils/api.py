@@ -11,10 +11,11 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 @retry(
     stop=stop_after_attempt(5),
     wait=wait_exponential(multiplier=1, min=2, max=30),
-    retry=retry_if_exception_type((requests.exceptions.RequestException,))
+    retry=retry_if_exception_type((requests.exceptions.RequestException,)),
+    reraise=True
 )
-def buscar_dados(url, encoding='utf-8'):
-    resposta = requests.get(url, timeout=30)
+def buscar_dados(url, params={}, encoding='utf-8'):
+    resposta = requests.get(url, params=params, timeout=30)
     #Caso o valor do encoding não for informado o valor será o defaut = utf-8    
     resposta.encoding = encoding
     resposta.raise_for_status()
@@ -27,3 +28,4 @@ def obter_estado_id_por_uf(uf):
     dados = buscar_dados(IBGE_ESTADO_URL)
     estado_id = dados['id']
     return estado_id
+
